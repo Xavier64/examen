@@ -1,0 +1,79 @@
+main{
+    display: flex;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vw;
+}
+/*  -----------Partie Profil-------- */
+/* -----------Partie Gauche ------------- */
+#profil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    color: white;
+}
+
+#profil>span{
+    color:#AF956E ;
+    font-size: 3vw;
+}
+
+#profil>form{
+    display: flex;
+    flex-direction: column;
+    width:20vw;
+    
+}
+
+#profil>form>input{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-bottom:#AF956E solid 4px;
+    color: white;
+}
+
+#profil div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height:8vw;
+    width:25vw;
+}
+
+.change{
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 0.4vw;
+    height: 3vw;
+    width: 10vw;
+    color: white;
+    background: #AF956E;
+    border-radius: 25px;
+    font-size: 0.8vw;
+    font-family: 'Alegreya', serif;
+}
+
+#profil p{
+    font-size: 1.5vw;
+}
+
+/* ----------- Partie Droite--------- */
+
+#historique{
+    color: #AF956E ;
+    font-size: 3vw;
+}
+/* -----------Fin Profil----------- */
+
+/* ----------------Debut Panier---------- */
+
+main>section>span{
+    color: #AF956E ;
+    font-size: 3vw;
+}
+section>span>p{
+    color: #AF956E ;
+}

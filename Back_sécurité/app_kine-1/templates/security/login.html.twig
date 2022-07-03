@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+{% block title %}Connexion{% endblock %}
+{% block stylesheets %}
+    <link href="{{'styles/login.css' }}" rel="stylesheet" />
+{% endblock %}
+{% endblock %}
+{% block body %}
+   
+    <div class="container">
+    <img src ="img/logoconnect.png">
+    <h1 class="h3 mb-3 font-weight-normal">Bonjour !</h1>
+    
+    <form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    {# {% if app.user %}
+        <div class="mb-3">
+            Vous vous êtes enregistré en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+        </div>
+    {% endif %} #}
+    <div class="inputcontainer">
+    <label for="inputEmail">Email</label>
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+    <label for="inputPassword">Mot de passe</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Se souvenir de moi
+            </label>
+        </div>
+    </div>
+    <div class="btncontainer">
+    <button class="btn btn-lg btn-primary btn-connexion" type="submit">SE CONNECTER</button>
+    <button class="btn btn-lg btn-primary btn-inscription"><a href="/register">S'INSCRIRE</button>
+    </div>   
+    </form>
+    </div>
+{% endblock %}
